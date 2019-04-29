@@ -1,0 +1,7 @@
+//Replace the new location with the new spawn location
+
+script.Parent.Touched:connect(function(hit) 
+ if hit.Parent:FindFirstChild('Humanoid') then 
+  hit.Parent.Head.CFrame = CFrame.new("new location")
+ end
+end)
