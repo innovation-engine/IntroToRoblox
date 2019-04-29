@@ -1,0 +1,6 @@
+function onTouched(part)
+	local player = part.Parent:findFirstChild("Humanoid")
+	if player~= nil then wait (0.001) player.Health = 0 
+	end 
+end 
+script.Parent.Touched:connect(onTouched)
