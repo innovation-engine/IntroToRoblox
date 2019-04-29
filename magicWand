@@ -1,0 +1,18 @@
+local tool = script.Parent
+local sound = workspace["Fairy Wand (a)"]
+local sparkles = Instance.new("Sparkles", char)
+local lighting = game:GetService("Lighting")
+
+local function onActivate()
+	if game.Lighting.ClockTime >= 8 and game.Lighting.ClockTime < 16 then
+		game.Lighting.ClockTime = 20
+		sound.Playing = true
+		Lighting.FogStart = 25
+		
+	else
+		game.Lighting.ClockTime = 8
+		sound.Playing = true 
+	end
+end
+
+tool.Activated:Connect(onActivate)
